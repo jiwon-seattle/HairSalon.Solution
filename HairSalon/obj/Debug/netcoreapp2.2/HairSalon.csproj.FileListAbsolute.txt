@@ -33,3 +33,5 @@
 /Users/Guest/Desktop/HairSalon.Solution/HairSalon/obj/Debug/netcoreapp2.2/Razor/Views/Clients/Details.g.cshtml.cs
 /Users/Guest/Desktop/HairSalon.Solution/HairSalon/obj/Debug/netcoreapp2.2/Razor/Views/Clients/Edit.g.cshtml.cs
 /Users/Guest/Desktop/HairSalon.Solution/HairSalon/obj/Debug/netcoreapp2.2/Razor/Views/Clients/Index.g.cshtml.cs
+/Users/Guest/Desktop/HairSalon.Solution/HairSalon/obj/Debug/netcoreapp2.2/Razor/Views/Shared/Footer.g.cshtml.cs
+/Users/Guest/Desktop/HairSalon.Solution/HairSalon/obj/Debug/netcoreapp2.2/Razor/Views/Shared/Header.g.cshtml.cs

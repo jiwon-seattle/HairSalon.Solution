@@ -3,14 +3,20 @@
 }
 
 @model HairSalon.Models.Stylist
-<div class=container>
+<div class=stylistCreate>
   <h2>Add a new stylist</h2>
   @using (Html.BeginForm())
   {
     <h3> Stylist Name:
-    @Html.TextBoxFor((model => model.StylistName), new { @required = "required", @placeholder = "ex> Jiwon Han"})
-    </h3>
-
+    @Html.TextBoxFor((model => model.StylistName), new { @required = "required"})</h3>
+    <h3> Main Skill:
+    @Html.TextBoxFor((model => model.MainSkill), new { @required = "required"})</h3>
+    <h3> Previous Company:
+    @Html.TextBoxFor((model => model.ExCompany), new { @required = "required"})</h3>
+    <h3> Work experience:
+    @Html.TextBoxFor((model => model.WorkExperience), new { @required = "required"})</h3>
+    <h3> Start Date:
+    @Html.TextBoxFor((model => model.HiredDate), new { @type = "date", @required = "required"})</h3>
     <input class="btn btn-primary" type="submit" style="cursor: pointer;">
   }
 
