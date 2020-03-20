@@ -1,0 +1,19 @@
+@{
+  Layout = "_Layout";
+}
+
+<div clas="container">
+  <h2>Edit : @Html.DisplayFor(model => model.StylistName)</h2>
+
+  @using (Html.BeginForm())
+  {
+    @Html.HiddenFor(model => model.StylistId)
+
+    @Html.LabelFor(model => model.StylistName)
+    @Html.EditorFor(model => model.StylistName)
+
+    <input class="btn btn-primary" type="submit" value="Save">
+  }
+
+  <p class="link">@Html.ActionLink("Back to Stylist list", "Index")</p>
+</div>
