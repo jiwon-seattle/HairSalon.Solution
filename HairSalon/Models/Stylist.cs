@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System;
 
 namespace HairSalon.Models
@@ -6,7 +7,7 @@ namespace HairSalon.Models
   {
     public Stylist()
     {
-      this.Stylist = new HashSet<Stylist>();
+      this.Clients = new HashSet<Client>();
     }
     public int StylistId {get; set;}
     public string StylistName {get; set;}

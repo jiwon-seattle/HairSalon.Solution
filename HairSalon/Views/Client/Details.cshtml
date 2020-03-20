@@ -1,6 +1,7 @@
 @{
   Layout = "_Layout";
 }
+@model HairSalon.Models.Client
 
 <div class="container">
 <h2>Client Detail</h2>
@@ -9,7 +10,7 @@
 <h3>Stylist : @ViewBag.StylistName</h3>
 <h3>Client Name : @Html.DisplayFor(model => model.ClientName)</h3>
 <hr />
-
+ 
 <p class="link">@Html.ActionLink("Edit this Client", "Edit", new { id = Model.ClientId})</p>
 <p class="link">@Html.ActionLink("Delete this Client", "Delete", new { id = Model.ClientId})</p>
 <p class="link">@Html.ActionLink("Back to list", "Index")</p>

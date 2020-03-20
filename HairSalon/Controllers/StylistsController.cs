@@ -7,16 +7,16 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace HairSalon.Controllers
 {
-  public class StylistsController : Controllers
+  public class StylistsController : Controller
   {
     private readonly HairSalonContext _db;
     public StylistsController(HairSalonContext db)
     {
       _db = db;
     }
-    public Action Index()
+    public ActionResult Index()
     {
-      List<Stylist> model = _db.Stylist.ToList();
+      List<Stylist> model = _db.Stylists.ToList();
       return View(model);
     }
     public ActionResult Create()
@@ -26,18 +26,18 @@ namespace HairSalon.Controllers
     [HttpPost]
     public ActionResult Create(Stylist stylist)
     {
-      _db.Stylist.Add(stylist);
-      _db.SaveChange();
+      _db.Stylists.Add(stylist);
+      _db.SaveChanges();
       return RedirectToAction("Index");
     }
     public ActionResult Details(int id)
     {
-      Stylist thisStylist = _db.Stylist.FirstOrDefault(stylist => stylist.StylistId == id);
+      Stylist thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
       return View(thisStylist);
     }
     public ActionResult Edit(int id)
     {
-      Stylist thisStylist = _db.Stylist.FirstOrDefault(stylist => stylist.StylistId == id);
+      Stylist thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
       return View(thisStylist);
     }
     [HttpPost]
@@ -49,21 +49,21 @@ namespace HairSalon.Controllers
     }
     public ActionResult Delete(int id)
     {
-      Stylist thisStylist = _db.Stylist.FirstOrDefault(stylist => stylist.StylistId == id);
+      Stylist thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
       return View(thisStylist);
     }
     [HttpPost, ActionName("Delete")]
     public ActionResult DeleteConfirmed(int id)
     {
-      Stylist thisStylist = _db.Stylist.FirstOrDefault(stylist => stylist.StylistId == id);
-      _db.Stylist.Remove(thisStylist);
+      Stylist thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
+      _db.Stylists.Remove(thisStylist);
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
     public ActionResult Search(int id)
     {
       List<Client> thisClients = _db.Clients.Where(Client => Client.StylistId == id).ToList();
-      Stylist thisStylist = _db.Stylist.FirstOrDefault(stylist => stylist.StylistId == id);
+      Stylist thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
       ViewBag.StylistName = thisStylist.StylistName;
       return View(thisClients);
     }

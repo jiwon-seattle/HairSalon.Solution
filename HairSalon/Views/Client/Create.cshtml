@@ -13,7 +13,8 @@
     @Html.DropDownList("StylistId")
 
     <p><strong>Stylist Name
-    @Html.TextBoxFor((model => model.StylistName), new { @required = "required", @class="form-control"})
+    @Html.TextBoxFor((model => model.ClientName), new { @required = "required", @class="form-control"})
+    </p>
 
     <input class="btn btn-primary" type="submit" value="Submit" style="cursor: pointer";>
 

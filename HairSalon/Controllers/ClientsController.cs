@@ -4,20 +4,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System;
 using Microsoft.EntityFrameworkCore;
-using Miscosoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace HairSalon.Controllers
 {
   public class ClientsController : Controller
   {
     private readonly HairSalonContext _db;
-    public ClinetsController(HairSalonContext db)
+    public ClientsController(HairSalonContext db)
     {
       _db = db;
     }
     public ActionResult Index()
     {
-      List<Clients> model = _db.Clients.Include(client => client.Stylist).ToList();
+      List<Client> model = _db.Clients.Include(client => client.Stylist).ToList();
       return View(model);
     }
     public ActionResult Create()
@@ -54,7 +54,7 @@ namespace HairSalon.Controllers
     }
     public ActionResult Delete(int id)
     {
-      var thisClient = _db.Clients.FirstOrDefault(client => client.ClientId == id)
+      var thisClient = _db.Clients.FirstOrDefault(client => client.ClientId == id);
       return View(thisClient);
     }
     [HttpPost, ActionName("Delete")]

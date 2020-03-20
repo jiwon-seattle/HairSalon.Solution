@@ -1,9 +1,10 @@
 @{
   Layout = "_Layout";
 }
+@model HairSalon.Models.Stylist
 
 <div clas="container">
-  <h2>Edit : @Html.DisplayFor(model => model.StylistName)</h2>
+  <h2>Edit : </h2>@Html.DisplayFor(model => model.StylistName)
 
   @using (Html.BeginForm())
   {
