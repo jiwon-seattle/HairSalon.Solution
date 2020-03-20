@@ -67,6 +67,5 @@ namespace HairSalon.Controllers
       ViewBag.StylistName = thisStylist.StylistName;
       return View(thisClients);
     }
-    
   }
 }
