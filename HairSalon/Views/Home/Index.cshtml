@@ -2,7 +2,17 @@
   Layout = "_Layout";
 }
 
-<div class="container">
+<div class="hairSalonMain">
   <h1>Hair Salon Management</h1>
+
+  <h3>This Hair Salon Management allows you to track hair-stylists and thier clients efficiently.</h3>
+
+  <div id="mainImg">
+  <img id="main1" src="~/img/hairsalonmain.png"> <img id="main2" src="~/img/management.png">
+  </div>
+
+  <div id="mainbottom">
   <p class="link"> @Html.ActionLink("See all Hair Stylist lists", "Index", "Stylists")</p>
+  <p class="link"> @Html.ActionLink("See all clients", "Index", "Clients")</p>
+  </div>
 </div>

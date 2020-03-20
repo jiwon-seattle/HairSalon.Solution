@@ -1,0 +1,29 @@
+
+
+.hairSalonMain
+{
+  border: 2px solid green;
+  padding: 30px;
+  text-align: center;
+}
+
+#mainImg
+{
+  display: flex;
+  justify-content: space-evenly;
+}
+#main1
+{
+  width: 15%;
+}
+
+#main2
+{
+  width: 15%;
+}
+
+#mainbottom
+{
+  display: flex;
+  justify-content: space-evenly;
+}
