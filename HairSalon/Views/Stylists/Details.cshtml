@@ -12,3 +12,9 @@
   <h4>Work Experience : @Html.DisplayFor(model => model.WorkExperience)</h4>
   <h4>Start Date : @Html.DisplayFor(model => model.HiredDate)</h4>
 </div>
+
+<div class="stylistDetailLink">
+  <p>@Html.ActionLink("Edit this Stylist", "Edit", new { id = Model.StylistId})</p>
+  <p>@Html.ActionLink("Delete this Stylist", "Edit", new { id = Model.StylistId})</p>
+  <p>@Html.ActionLink("Back to Stylist list", "Index")</p>
+</div>

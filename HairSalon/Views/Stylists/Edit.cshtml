@@ -3,18 +3,27 @@
 }
 @model HairSalon.Models.Stylist
 
-<div clas="container">
+<div clas="stylistEdit">
   <h2>Edit : </h2>@Html.DisplayFor(model => model.StylistName)
 
   @using (Html.BeginForm())
   {
     @Html.HiddenFor(model => model.StylistId)
 
-    @Html.LabelFor(model => model.StylistName)
-    @Html.EditorFor(model => model.StylistName)
-
-    <input class="btn btn-primary" type="submit" value="Save">
+    <h3> Stylist Name:
+    @Html.EditorFor((model => model.StylistName))</h3>
+    <h3> Main Skill:
+    @Html.EditorFor((model => model.MainSkill))</h3>
+    <h3> Previous Company:
+    @Html.EditorFor((model => model.ExCompany))</h3>
+    <h3> Work experience:
+    @Html.EditorFor((model => model.WorkExperience))</h3>
+    <h3> Start Date:
+    @Html.EditorFor((model => model.HiredDate))</h3>
+    
+    <input class="btn btn-primary" type="submit" value="Save" style="cursor: pointer;">
   }
-
-  <p class="link">@Html.ActionLink("Back to Stylist list", "Index")</p>
+  <div class="stylistEditLink">
+    <p class="link">@Html.ActionLink("Back to Stylist list", "Index")</p>
+  </div>
 </div>
