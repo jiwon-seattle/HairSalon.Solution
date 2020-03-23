@@ -1,0 +1,20 @@
+@{
+  Layout = "_Layout";
+}
+
+@model HairSalon.Models.Stylist
+
+<div class="contanier">
+  <h2>Search a Stylist</h2>
+
+
+  @using (Html.BeginForm())
+  {
+    <p><strong>Stylist Name
+    @Html.TextBoxFor((model => model.StylistName), new { @required = "required", @class="form-control"})
+    </p>
+    <input class="btn btn-primary" type="submit" value="Search" style="cursor: pointer";>
+  }
+
+
+</div>

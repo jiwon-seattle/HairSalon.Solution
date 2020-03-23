@@ -9,6 +9,10 @@
 <hr />
 <h3>Stylist : @ViewBag.StylistName</h3>
 <h3>Client Name : @Html.DisplayFor(model => model.ClientName)</h3>
+<h3>Client Phone Number : @Html.DisplayFor(model => model.ClientPhone)</h3>
+<h3>Client Address : @Html.DisplayFor(model => model.ClientAddress)</h3>
+<h3>Client Last Visit : @Html.DisplayFor(model => model.LastVisitDate)</h3>
+<h3>Client Birthday : @Html.DisplayFor(model => model.Birthday)</h3>
 <hr />
 
 <p class="link">@Html.ActionLink("Edit this Client", "Edit", new { id = Model.ClientId})</p>

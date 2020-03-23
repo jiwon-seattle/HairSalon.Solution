@@ -1,0 +1,23 @@
+@{
+  Layout = "_Layout";
+}
+
+@model HairSalon.Models.Client
+
+<div class="contanier">
+  <h2>Search a client</h2>
+
+
+  @using (Html.BeginForm())
+  {
+    @* @Html.LabelFor(model => model.Stylist)
+    @Html.DropDownList("StylistId") *@
+
+    <p><strong>Client Name
+    @Html.TextBoxFor((model => model.ClientName), new { @required = "required", @class="form-control"})
+    </p>
+    <input class="btn btn-primary" type="submit" value="Search" style="cursor: pointer";>
+  }
+
+
+</div>

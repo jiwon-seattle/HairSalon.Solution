@@ -18,24 +18,37 @@ namespace HairSalon.Controllers
     public ActionResult Index()
     {
       List<Client> model = _db.Clients.Include(client => client.Stylist).ToList();
+      var count = _db.Stylists.Count();
       return View(model);
     }
     public ActionResult Create()
     {
+
       ViewBag.StylistId = new SelectList(_db.Stylists, "StylistId", "StylistName");
+
+      // SelectList stylists = new SelectList(_db.Stylists, "StylistId", "StylistName");
+      // ViewBag.StylistId = stylists;
+      // ViewBag.stylistCount = stylists.Count();
       return View();
     }
     [HttpPost]
     public ActionResult Create(Client client)
     {
+      try
+      {
       _db.Clients.Add(client);
       _db.SaveChanges();
+      }
+      catch(DbUpdateException e)
+      {
+        TempData["ErrorMessage"] = "The Client phone number already exists in the data. Please check again.";
+      }      
       return RedirectToAction("Index");
     }
     public ActionResult Details(int id)
     {
       Client thisClient = _db.Clients.FirstOrDefault(client => client.ClientId == id);
-      Stylist thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
+      Stylist thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == thisClient.StylistId);
       ViewBag.StylistName = thisStylist.StylistName;
       return View(thisClient);
     }
@@ -64,6 +77,17 @@ namespace HairSalon.Controllers
       _db.Clients.Remove(thisClient);
       _db.SaveChanges();
       return RedirectToAction("Index");
+    }
+    public ActionResult Search()
+    {
+      // ViewBag.StylistId = new SelectList(_db.Stylists, "StylistId", "StylistName");
+      return View();
+    }
+    [HttpPost]
+    public ActionResult Search(string clientName)
+    {
+      List<Client> thisClients = _db.Clients.Where(client => client.ClientName == clientName).ToList();
+      return View("SearchResult", thisClients);
     }
   }
 }

@@ -26,8 +26,15 @@ namespace HairSalon.Controllers
     [HttpPost]
     public ActionResult Create(Stylist stylist)
     {
+      try
+      {
       _db.Stylists.Add(stylist);
       _db.SaveChanges();
+      }
+      catch(DbUpdateException e)
+      {
+        TempData["ErrorMessage"] = "The Name of Stylist already exists in the data. Please check again.";
+      }      
       return RedirectToAction("Index");
     }
     public ActionResult Details(int id)
@@ -60,12 +67,16 @@ namespace HairSalon.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
-    public ActionResult Search(int id)
+     public ActionResult Search()
     {
-      List<Client> thisClients = _db.Clients.Where(Client => Client.StylistId == id).ToList();
-      Stylist thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
-      ViewBag.StylistName = thisStylist.StylistName;
-      return View(thisClients);
+      return View();
     }
+    [HttpPost]
+    public ActionResult Search(string stylistName)
+    {
+      List<Stylist> thisStylists = _db.Stylists.Where(stylist => stylist.StylistName == stylistName).ToList();
+      return View("SearchResult", thisStylists);
+    }
+
   }
 }

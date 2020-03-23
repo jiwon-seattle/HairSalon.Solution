@@ -10,22 +10,32 @@
 
   @using (Html.BeginForm())
   {
-    @Html.LabelFor(model => model.Stylist)
-    @Html.DropDownList("StylistId")
+    if ((ViewBag.stylistId as SelectList).Count() == 0 ) {
+      <p>No Stylist added, Please add stylists first.</p>
+      <p>@Html.ActionLink("Add a Stylist", "Create", "Stylists")</p>
+    } 
+    else {
+      @Html.LabelFor(model => model.Stylist)
+      @Html.DropDownList("StylistId")
 
-    <p><strong>Client Name
-    @Html.TextBoxFor((model => model.ClientName), new { @required = "required", @class="form-control"})
-    </p>
-    <p><strong>Client Address
-    @Html.TextBoxFor((model => model.ClientAddress), new { @required = "required", @class="form-control"})
-    </p>
-    <p><strong>Last Visit
-    @Html.TextBoxFor((model => model.LastVisitDate), new { @type = "date", @required = "required", @class="form-control"})
-    </p>
-    <h3> Birthday:
-    @Html.TextBoxFor((model => model.Birthday), new { @type = "date", @required = "required"})</h3>
+      <p><strong>Client Name
+      @Html.TextBoxFor((model => model.ClientName), new { @required = "required", @class="form-control"})
+      </strong></p>
+      <p><strong>Client Phone Number
+      @Html.TextBoxFor((model => model.ClientPhone), new { @required = "required", @class="form-control"})
+      </strong></p>
+      <p><strong>Client Address
+      @Html.TextBoxFor((model => model.ClientAddress), new { @required = "required", @class="form-control"})
+      </strong></p>
+      <p><strong>Last Visit
+      @Html.TextBoxFor((model => model.LastVisitDate), new { @type = "date", @required = "required", @class="form-control"})
+      </strong></p>
+      <p><strong>Birthday
+      @Html.TextBoxFor((model => model.Birthday), new { @type = "date", @required = "required", @class="form-control"})</strong></p>
+      
 
-    <input class="btn btn-primary" type="submit" value="Submit" style="cursor: pointer";>
+      <input class="btn btn-primary" type="submit" value="Submit" style="cursor: pointer";>
+    }
   }
 
 </div>
