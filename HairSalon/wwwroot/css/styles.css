@@ -3,14 +3,37 @@
 {
   display: flex;
   flex-direction: row;
-
+  align-items: center;
+  justify-content: space-evenly;
+  border: 2px solid green;
+  position: absolute;
+  top: 0px;
+  width:100%;
+  height:50px;
+  background-color: #4b0082;
+  color: white;
+  font-size: 20px;
 }
 
+#headerImg
+{
+  left: 42%;
+  position: absolute;
+  width:500px;
+}
+.container
+{
+  top: 50px;
+  height:100%;
+  width:100%;
+  position: relative;
+}
 body
 {
   /* background: linear-gradient(red, yellow); */
-  background-color:  #f9e6ff;
+  /* background-color:  #f9e6ff; */
   height: 1500px;
+  font-family: 'proxima-nova','Helvetica Neue',Helvetica,Arial,sans-serif;
 }
 
 .hairSalonMain
@@ -19,7 +42,7 @@ body
   padding: 30px;
   text-align: center;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   flex-direction: column;
   align-items: center;
   height: 600px;
@@ -29,10 +52,18 @@ body
 #mainImg
 {
   display: flex;
-  justify-content: space-evenly;
-  font-size: 70px;
+  justify-content: space-around;
   width:500px;
   border: 2px solid green;
+}
+
+#imgX
+{
+  background: linear-gradient(to right, cyan, blue, violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 60px;
+  font-size: 70px;
 }
 #main1
 {
@@ -55,13 +86,261 @@ body
   border: 2px solid green;
   width: 500px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
+.stylistIndex
+{
+  border: 2px solid green;
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  height: 600px;
+}
 .stylistCreate
 {
   border: 2px solid green;
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
+  height: 600px;
+}
+
+#stylistLists
+{
+  border: 2px solid green;
+  height:350px;
+}
+#stylistLinks
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 2px solid green;
+  width: 600px;
+}
+
+.stylistSearch
+{
+  border: 2px solid green;
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  height: 600px;
+}
+
+#stylistSearchForm
+{
+  border: 2px solid green;
+  height:200px;
+  width: 300px;
+}
+
+.stylistSearchResult
+{
+  border: 2px solid green;
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  height: 600px;
+}
+
+#stylistSearchLists
+{
+  border: 2px solid green;
+  height:200px;
+  width: 300px;
+}
+
+.stylistDetails
+{
+  border: 2px solid green;
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  height: 600px;
+}
+
+#stylistDetailLinks
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 2px solid green;
+  width: 600px;
+}
+
+.stylistDelete
+{
+  border: 2px solid green;
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  height: 600px;
+}
+
+#stylistNameDelete
+{
+  border: 2px solid green;
+  height: 300px;
+}
+
+.stylistEdit
+{
+  border: 2px solid green;
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  height: 600px;
+}
+
+.clientIndex
+{
+  border: 2px solid green;
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  height: 600px;
+}
+
+#clientList
+{
+  border: 2px solid green;
+  height:350px;
+}
+
+#clientLinks
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 2px solid green;
+  width: 600px;
+}
+
+.clientCreate
+{
+  border: 2px solid green;
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  height: 600px;
+}
+
+.searchClient
+{
+  border: 2px solid green;
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  height: 600px;
+}
+
+#clientSearchForm
+{
+  border: 2px solid green;
+  height:200px;
+  width: 300px;
+}
+
+.clientSearchResult
+{
+  border: 2px solid green;
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  height: 600px;
+}
+
+#clientSearchLists
+{
+  border: 2px solid green;
+  height:200px;
+  width: 300px;
+}
+
+.clientDetails
+{
+  border: 2px solid green;
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  height: 600px;
+}
+
+#clientDetailLinks
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 2px solid green;
+  width: 600px;
+}
+
+.clientEdit
+{
+  border: 2px solid green;
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  height: 600px;
+}
+
+.clientDelete
+{
+  border: 2px solid green;
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  height: 600px;
+}
+
+#clientNameDelete
+{
+  border: 2px solid green;
+  height: 300px;
 }
 
 div#footer {

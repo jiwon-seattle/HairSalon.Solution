@@ -5,22 +5,29 @@
 @using HairSalon.Models;
 @model List<HairSalon.Models.Stylist>;
 
-<div class="container">
-
-  @if (TempData.ContainsKey("ErrorMessage"))
-  {
-  <h4 id="errorMessage">@TempData["ErrorMessage"]</h4>
-  }
-  @if(Model.Count == 0)
-  {
-    <h4>No Stylist has been added</h4>
-  }
-  else
-  {
-    @foreach(Stylist stylist in Model)
+<div class="stylistIndex">
+  <h2><strong>Stylists</strong></h2>
+  <div id="stylistDuplicate">
+    @if (TempData.ContainsKey("ErrorMessage"))
     {
-      <h4 class="link">@Html.ActionLink($"{stylist.StylistName}", "Details", new { id = stylist.StylistId})</h4>
+    <h4 id="errorMessage"><img src="~/img/important.png" style="width: 30px;">@TempData["ErrorMessage"]</h4>
     }
-  }
-  <p class="link">@Html.ActionLink("Add a new Stylist", "Create")</p>
+  </div>
+  <div id="stylistLists">
+    @if(Model.Count == 0)
+    {
+      <h4><img src="~/img/barber.png" style="width: 30px;">No Stylist has been added</h4>
+    }
+    else
+    {
+      @foreach(Stylist stylist in Model)
+      {
+        <h4>@Html.ActionLink($"{stylist.StylistName}", "Details", new { id = stylist.StylistId})</h4>
+      }
+    }
+  </div>
+  <div id="stylistLinks">
+    <p><img src="~/img/add-friend.png" style="width: 30px;">@Html.ActionLink("Add a new Stylist", "Create")</p>
+    <p><img src="~/img/barcode.png" style="width: 30px;">@Html.ActionLink("Search a Stylist", "Search")</p>
+  </div>
 </div>

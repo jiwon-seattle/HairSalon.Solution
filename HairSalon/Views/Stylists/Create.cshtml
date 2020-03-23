@@ -4,21 +4,21 @@
 
 @model HairSalon.Models.Stylist
 <div class=stylistCreate>
-  <h2>Add a new stylist</h2>
+  <h2><strong>Add a new stylist</strong></h2>
+  
   @using (Html.BeginForm())
   {
-    <h3> Stylist Name:
-    @Html.TextBoxFor((model => model.StylistName), new { @required = "required"})</h3>
-    <h3> Main Skill:
-    @Html.TextBoxFor((model => model.MainSkill), new { @required = "required"})</h3>
-    <h3> Previous Company:
-    @Html.TextBoxFor((model => model.ExCompany), new { @required = "required"})</h3>
-    <h3> Work experience:
-    @Html.TextBoxFor((model => model.WorkExperience), new { @required = "required"})</h3>
-    <h3> Start Date:
-    @Html.TextBoxFor((model => model.HiredDate), new { @type = "date", @required = "required"})</h3>
-    <input class="btn btn-primary" type="submit" style="cursor: pointer;">
-  }
+    <p><strong>Stylist Name
+    @Html.TextBoxFor((model => model.StylistName), new { @required = "required", @class ="form-control", @style="width: 300px;"})</strong></p>
+    <p><strong>Main Skill
+    @Html.TextBoxFor((model => model.MainSkill), new { @required = "required", @class ="form-control", @style="width: 300px;"})</strong></p>
+    <p><strong>Previous Company
+    @Html.TextBoxFor((model => model.ExCompany), new { @required = "required", @class ="form-control", @style="width: 300px;"})</strong></p>
+    <p><strong>Work experience
+    @Html.TextBoxFor((model => model.WorkExperience), new { @required = "required", @class ="form-control", @style="width: 300px;"})</strong></p>
+    <p><strong>Start Date
+    @Html.TextBoxFor((model => model.HiredDate), new { @type = "date", @required = "required", @class ="form-control", @style="width: 300px;"})</strong></p>
 
-  <p class="link">@Html.ActionLink("Show all Stylists", "Index")</p>
+    <input class="w3-button w3-purple" type="submit" value="submit" style="cursor: pointer;">
+  }
 </div>

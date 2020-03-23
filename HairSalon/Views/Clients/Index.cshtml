@@ -5,23 +5,27 @@
 @using HairSalon.Models;
 @model List<HairSalon.Models.Client>
 
-<div class="container">
-  <h2>Clients</h2>
+<div class="clientIndex">
+  <h2><strong>Clients</strong></h2>
+  <div id="clientDuplicate">
+    @if (TempData.ContainsKey("ErrorMessage"))
+    {
+      <h3 id="errorMessage"><img src="~/img/important.png" style="width: 30px;">@TempData["ErrorMessage"]</h3>
+    }
+  </div>
+  <div id="clientList">
+    @if (Model.Count == 0)
+    {
+      <h3><img src="~/img/target.png" style="width: 30px;">No clients have been added</h3>
 
-  @if (TempData.ContainsKey("ErrorMessage"))
-  {
-    <h3 id="errorMessage">@TempData["ErrorMessage"]</h3>
-  }
-  @if (Model.Count == 0)
-  {
-    <h3>No clients have been added</h3>
-
-  }
-  @foreach (Client client in Model)
-  {
-    <li class="link">@Html.ActionLink($"{client.ClientName}", "Details", new {id = client.ClientId})</li>
-  }
-
-   <p>@Html.ActionLink("Add a Client", "Create")</p>
-
+    }
+    @foreach (Client client in Model)
+    {
+      <h4>@Html.ActionLink($"{client.ClientName}", "Details", new {id = client.ClientId})</h4>
+    }
+  </div>
+  <div id="clientLinks">
+    <p><img src="~/img/add-friend.png" style="width: 30px;">@Html.ActionLink("Add a Client", "Create")</p>
+    <p><img src="~/img/barcode.png" style="width: 30px;">@Html.ActionLink("Search a Client", "Search")</p>
+  </div>
 </div>

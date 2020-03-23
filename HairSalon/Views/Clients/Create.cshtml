@@ -4,9 +4,8 @@
 
 @model HairSalon.Models.Client
 
-<div class="contanier">
-  <h2>Add a new client</h2>
-
+<div class="clientCreate">
+  <h2><strong>Add a new client</strong></h2>
 
   @using (Html.BeginForm())
   {
@@ -32,9 +31,8 @@
       </strong></p>
       <p><strong>Birthday
       @Html.TextBoxFor((model => model.Birthday), new { @type = "date", @required = "required", @class="form-control"})</strong></p>
-      
 
-      <input class="btn btn-primary" type="submit" value="Submit" style="cursor: pointer";>
+      <input class="w3-button w3-purple" type="submit" value="Submit" style="cursor: pointer";>
     }
   }
 

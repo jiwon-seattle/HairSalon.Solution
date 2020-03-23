@@ -4,17 +4,20 @@
 
 @model HairSalon.Models.Stylist
 
-<div class="container">
-  <h2>Stylist Details</h2>
+<div class="stylistDetails">
+  <h2><strong>Stylist Details</strong></h2>
+  <hr/>
   <h4>Stylist Name : @Html.DisplayFor(model => model.StylistName)</h4>
   <h4>Main Skill : @Html.DisplayFor(model => model.MainSkill)</h4>
   <h4>Previous Company : @Html.DisplayFor(model => model.ExCompany)</h4>
   <h4>Work Experience : @Html.DisplayFor(model => model.WorkExperience)</h4>
   <h4>Start Date : @Html.DisplayFor(model => model.HiredDate)</h4>
-</div>
+  <hr/>
 
-<div class="stylistDetailLink">
-  <p>@Html.ActionLink("Edit this Stylist", "Edit", new { id = Model.StylistId})</p>
-  <p>@Html.ActionLink("Delete this Stylist", "Edit", new { id = Model.StylistId})</p>
-  <p>@Html.ActionLink("Back to Stylist list", "Index")</p>
+  <div id="stylistDetailLinks">
+    <p><img src="~/img/eraser.png" style="width: 30px;">@Html.ActionLink("Edit this Stylist", "Edit", new { id = Model.StylistId})</p>
+    <p><img src="~/img/delete.png" style="width: 30px;">@Html.ActionLink("Delete this Stylist", "Delete", new { id = Model.StylistId})</p>
+    <p><img src="~/img/hair.png" style="width: 30px;">@Html.ActionLink("Back to Stylist list", "Index")</p>
+  </div>
+
 </div>

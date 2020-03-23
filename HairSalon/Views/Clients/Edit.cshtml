@@ -4,8 +4,8 @@
 
 @model HairSalon.Models.Client
 
-<div class="container">
-  <h2>Edit this client : @Html.DisplayFor(model => model.ClientName)</h2>
+<div class="clientEdit">
+  <h2><strong>Edit : @Html.DisplayFor(model => model.ClientName)</strong></h2>
 
   @using (Html.BeginForm())
   {
@@ -14,11 +14,18 @@
     @Html.LabelFor(model => model.Stylist)
     @Html.DropDownList("StylistId")
 
-    @Html.LabelFor(model => model.ClientName)
-    @Html.EditorFor(model => model.ClientName)
+    <p> Client Name:
+    @Html.EditorFor(model => model.ClientName, new { htmlAttributes = new { @class = "form-control" } })</p>
+    <p> Phone Number:
+    @Html.EditorFor(model => model.ClientPhone, new { htmlAttributes = new { @class = "form-control" } })</p>
+    <p> Address:
+    @Html.EditorFor(model => model.ClientAddress, new { htmlAttributes = new { @class = "form-control" } })</p>
+    <p> Last Visit Date:
+    @Html.EditorFor(model => model.LastVisitDate, new { htmlAttributes = new { @class = "form-control" } })</p>
+    <p> Birthday:
+    @Html.EditorFor(model => model.Birthday, new { htmlAttributes = new { @class = "form-control" } })</p>
 
-    <input class="btn btn-primary" value="Save">
+    <input class="w3-button w3-purple" type="submit" value="Save">
   }
 
-  <p>@Html.ActionLink("Back to list", "Index")<p>
 </div>

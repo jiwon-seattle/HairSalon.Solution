@@ -3,27 +3,24 @@
 }
 @model HairSalon.Models.Stylist
 
-<div clas="stylistEdit">
-  <h2>Edit : </h2>@Html.DisplayFor(model => model.StylistName)
+<div class="stylistEdit">
+  <h2><strong>Edit : @Html.DisplayFor(model => model.StylistName)</strong></h2>
 
   @using (Html.BeginForm())
   {
     @Html.HiddenFor(model => model.StylistId)
 
-    <h3> Stylist Name:
-    @Html.EditorFor((model => model.StylistName))</h3>
-    <h3> Main Skill:
-    @Html.EditorFor((model => model.MainSkill))</h3>
-    <h3> Previous Company:
-    @Html.EditorFor((model => model.ExCompany))</h3>
-    <h3> Work experience:
-    @Html.EditorFor((model => model.WorkExperience))</h3>
-    <h3> Start Date:
-    @Html.EditorFor((model => model.HiredDate))</h3>
+    <p> Stylist Name:
+    @Html.EditorFor(model => model.StylistName, new { htmlAttributes = new { @class = "form-control" } })</p>
+    <p> Main Skill:
+    @Html.EditorFor(model => model.MainSkill, new { htmlAttributes = new { @class = "form-control" } })</p>
+    <p> Previous Company:
+    @Html.EditorFor(model => model.ExCompany, new { htmlAttributes = new { @class = "form-control" } })</p>
+    <p> Work experience:
+    @Html.EditorFor(model => model.WorkExperience, new { htmlAttributes = new { @class = "form-control" } })</p>
+    <p> Start Date:
+    @Html.EditorFor(model => model.HiredDate, new { htmlAttributes = new { @class = "form-control" } })</p>
     
-    <input class="btn btn-primary" type="submit" value="Save" style="cursor: pointer;">
+    <input class="w3-button w3-purple" type="submit" value="Save" style="cursor: pointer;">
   }
-  <div class="stylistEditLink">
-    <p class="link">@Html.ActionLink("Back to Stylist list", "Index")</p>
-  </div>
 </div>
