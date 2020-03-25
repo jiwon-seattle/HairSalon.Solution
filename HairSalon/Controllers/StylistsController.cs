@@ -80,19 +80,19 @@ namespace HairSalon.Controllers
       return View("SearchResult", thisStylists);
     }
 
-    public ActionResult Appointment()
-    {
+//     public ActionResult Appointment()
+//     {
 
-      List<Stylist> model = _db.Stylists.ToList();
-      return View(model);
-    }
+//       List<Stylist> model = _db.Stylists.ToList();
+//       return View(model);
+//     }
 
-    [HttpPost]
-    public ActionResult Appointment()
-    {
-      List<Stylist> model = _db.Stylists.ToList();
-      return View(model);
-    }
+//     [HttpPost]
+//     public ActionResult Appointment()
+//     {
+//       List<Stylist> model = _db.Stylists.ToList();
+//       return View(model);
+//     }
 
   }
 }
