@@ -79,36 +79,5 @@ namespace HairSalon.Controllers
       List<Stylist> thisStylists = _db.Stylists.Where(stylist => stylist.StylistName == stylistName).ToList();
       return View("SearchResult", thisStylists);
     }
-
-<<<<<<< HEAD
-    // public ActionResult Appointment()
-    // {
-
-    //   List<Stylist> model = _db.Stylists.ToList();
-    //   return View(model);
-    // }
-
-    // [HttpPost]
-    // public ActionResult Appointment()
-    // {
-    //   List<Stylist> model = _db.Stylists.ToList();
-    //   return View(model);
-    // }
-=======
-//     public ActionResult Appointment()
-//     {
-
-//       List<Stylist> model = _db.Stylists.ToList();
-//       return View(model);
-//     }
-
-//     [HttpPost]
-//     public ActionResult Appointment()
-//     {
-//       List<Stylist> model = _db.Stylists.ToList();
-//       return View(model);
-//     }
->>>>>>> fd310b93d2bdc0b5828f02d50277fd79f1d002b2
-
   }
 }
