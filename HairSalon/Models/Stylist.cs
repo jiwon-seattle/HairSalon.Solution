@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Web.UI.WebControls
 using System;
 
 namespace HairSalon.Models
@@ -16,8 +15,6 @@ namespace HairSalon.Models
     public string ExCompany {get; set;}
     public int WorkExperience {get; set;}
     public DateTime HiredDate {get; set;}
-    public DateTime Appointment {get; set;}
-    public bool AppointmentSelect {get; set;}
     public virtual ICollection<Client> Clients {get; set;}
   }
 }
