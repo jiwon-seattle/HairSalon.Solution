@@ -34,7 +34,7 @@
   # After successfull pkg installtion
   $ dotnet run
 ```
-Now, it will automatically open http://localhost:5000 and show you the Best Restaurant main page.
+Now, it will automatically open http://localhost:5000 and show you the Hair Salon main page.
 
 You might encounter a MySql database related errors on initial loading since this application needs a specific data route to fetch data.
 
