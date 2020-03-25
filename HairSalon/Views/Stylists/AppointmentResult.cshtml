@@ -1,0 +1,24 @@
+@{
+  Layout = "_Layout";
+}
+
+
+@using HairSalon.Models;
+@model List<HairSalon.Models.Stylist>
+
+<div class="stylistSearchResult">
+  <h2><strong>Stylist</strong></h2>
+
+  <div id="stylistSearchLists">
+    @if (Model.Count == 0)
+    {
+      <h3>No clients have been found</h3>
+
+    }
+    @foreach (Stylist stylist in Model)
+    {
+      <p>@Html.ActionLink($"{stylist.StylistName}", "Details", new {id = stylist.StylistId})</p>
+    }
+  </div>
+
+</div>

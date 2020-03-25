@@ -11,7 +11,7 @@
   <h4>Main Skill : @Html.DisplayFor(model => model.MainSkill)</h4>
   <h4>Previous Company : @Html.DisplayFor(model => model.ExCompany)</h4>
   <h4>Work Experience : @Html.DisplayFor(model => model.WorkExperience)</h4>
-  <h4>Start Date : @Html.DisplayFor(model => model.HiredDate)</h4>
+  <h4>Start Date : @Html.DisplayFor(model => model.HiredDate.Month)/@Html.DisplayFor(model => model.HiredDate.Day)/@Html.DisplayFor(model => model.HiredDate.Year)</h4>
   <hr/>
 
   <div id="stylistDetailLinks">

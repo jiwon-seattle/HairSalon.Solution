@@ -12,6 +12,7 @@ namespace HairSalon.Models
     public string ClientAddress {get; set;}
     public DateTime LastVisitDate {get; set;}
     public DateTime Birthday {get; set;}
+    
   }
   
 }

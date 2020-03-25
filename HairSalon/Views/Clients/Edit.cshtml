@@ -21,10 +21,9 @@
     <p> Address:
     @Html.EditorFor(model => model.ClientAddress, new { htmlAttributes = new { @class = "form-control" } })</p>
     <p> Last Visit Date:
-    @Html.EditorFor(model => model.LastVisitDate, new { htmlAttributes = new { @class = "form-control" } })</p>
+    @Html.TextBoxFor(model => model.LastVisitDate, "{0:MM-dd-yyyy}", new { @class = "form-control" } )</p>
     <p> Birthday:
-    @Html.EditorFor(model => model.Birthday, new { htmlAttributes = new { @class = "form-control" } })</p>
-
+    @Html.TextBoxFor(model => model.Birthday, "{0:MM-dd-yyyy}", new { @class = "form-control" } )</p>
     <input class="w3-button w3-purple" type="submit" value="Save">
   }
 

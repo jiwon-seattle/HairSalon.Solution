@@ -19,7 +19,7 @@
     <p> Work experience:
     @Html.EditorFor(model => model.WorkExperience, new { htmlAttributes = new { @class = "form-control" } })</p>
     <p> Start Date:
-    @Html.EditorFor(model => model.HiredDate, new { htmlAttributes = new { @class = "form-control" } })</p>
+    @Html.TextBoxFor(model => model.HiredDate, "{0:MM-dd-yyyy}", new { @class = "form-control" })</p>
     
     <input class="w3-button w3-purple" type="submit" value="Save" style="cursor: pointer;">
   }

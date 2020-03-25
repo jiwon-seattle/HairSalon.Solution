@@ -11,8 +11,8 @@
   <h4>Client Name : @Html.DisplayFor(model => model.ClientName)</h4>
   <h4>Phone Number : @Html.DisplayFor(model => model.ClientPhone)</h4>
   <h4>Address : @Html.DisplayFor(model => model.ClientAddress)</h4>
-  <h4>Last Visit : @Html.DisplayFor(model => model.LastVisitDate)</h4>
-  <h4>Birthday : @Html.DisplayFor(model => model.Birthday)</h4>
+  <h4>Last Visit : @Html.DisplayFor(model => model.LastVisitDate.Month)/@Html.DisplayFor(model => model.LastVisitDate.Day)/@Html.DisplayFor(model => model.LastVisitDate.Year)</h4>
+  <h4>Birthday : @Html.DisplayFor(model => model.Birthday.Month)/@Html.DisplayFor(model => model.Birthday.Day)/@Html.DisplayFor(model => model.Birthday.Year)</h4>
   <hr />
 
   <div id="clientDetailLinks">

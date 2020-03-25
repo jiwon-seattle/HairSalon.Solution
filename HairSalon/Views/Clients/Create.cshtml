@@ -10,28 +10,28 @@
   @using (Html.BeginForm())
   {
     if ((ViewBag.stylistId as SelectList).Count() == 0 ) {
-      <p>No Stylist added, Please add stylists first.</p>
-      <p>@Html.ActionLink("Add a Stylist", "Create", "Stylists")</p>
+      <p id="nonStylist"><strong>No Stylist added, Please add stylists first.</strong></p>
+      <p><img src="~/img/hair-cut.png" style="width: 30px;">@Html.ActionLink("Add a Stylist", "Create", "Stylists")</p>
     } 
     else {
       @Html.LabelFor(model => model.Stylist)
       @Html.DropDownList("StylistId")
 
       <p><strong>Client Name
-      @Html.TextBoxFor((model => model.ClientName), new { @required = "required", @class="form-control"})
+      @Html.TextBoxFor((model => model.ClientName), new { @required = "required", @placeholder = "Mary Joe", @class="form-control"})
       </strong></p>
       <p><strong>Client Phone Number
-      @Html.TextBoxFor((model => model.ClientPhone), new { @required = "required", @class="form-control"})
+      @Html.TextBoxFor((model => model.ClientPhone), new { @required = "required", @placeholder = "1234567890", @maxlength="10", @class="form-control"})
       </strong></p>
       <p><strong>Client Address
-      @Html.TextBoxFor((model => model.ClientAddress), new { @required = "required", @class="form-control"})
+      @Html.TextBoxFor((model => model.ClientAddress), new { @required = "required", @placeholder = "123nd SE AVE Bellevue 98004", @class="form-control"})
       </strong></p>
       <p><strong>Last Visit
       @Html.TextBoxFor((model => model.LastVisitDate), new { @type = "date", @required = "required", @class="form-control"})
       </strong></p>
       <p><strong>Birthday
       @Html.TextBoxFor((model => model.Birthday), new { @type = "date", @required = "required", @class="form-control"})</strong></p>
-
+      <br>
       <input class="w3-button w3-purple" type="submit" value="Submit" style="cursor: pointer";>
     }
   }
