@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jiwon Han\\Desktop\\Coding\\c#-project\\HairSalon.Solution\\HairSalon\\HairSalon.csproj": {}
+    "C:\\Users\\Jiwon Han\\desktop\\coding\\c#-project\\HairSalon.Solution\\HairSalon\\HairSalon.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jiwon Han\\Desktop\\Coding\\c#-project\\HairSalon.Solution\\HairSalon\\HairSalon.csproj": {
+    "C:\\Users\\Jiwon Han\\desktop\\coding\\c#-project\\HairSalon.Solution\\HairSalon\\HairSalon.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jiwon Han\\Desktop\\Coding\\c#-project\\HairSalon.Solution\\HairSalon\\HairSalon.csproj",
+        "projectUniqueName": "C:\\Users\\Jiwon Han\\desktop\\coding\\c#-project\\HairSalon.Solution\\HairSalon\\HairSalon.csproj",
         "projectName": "HairSalon",
-        "projectPath": "C:\\Users\\Jiwon Han\\Desktop\\Coding\\c#-project\\HairSalon.Solution\\HairSalon\\HairSalon.csproj",
+        "projectPath": "C:\\Users\\Jiwon Han\\desktop\\coding\\c#-project\\HairSalon.Solution\\HairSalon\\HairSalon.csproj",
         "packagesPath": "C:\\Users\\Jiwon Han\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jiwon Han\\Desktop\\Coding\\c#-project\\HairSalon.Solution\\HairSalon\\obj\\",
+        "outputPath": "C:\\Users\\Jiwon Han\\desktop\\coding\\c#-project\\HairSalon.Solution\\HairSalon\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
