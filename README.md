@@ -20,7 +20,7 @@
   5. A user is able to edit/delete/search clients in the data
   4. A user is able to manage the hair salon efficiently
 
-  <image src="./HairSalon.Solution/HairSalon/wwwroot/img/HairSalon.gif" width="750px" />
+  <image src="./HairSalon/wwwroot/img/HairSalon.gif" width="750px" />
 
 ## 2. Development
 ### Tech stack:
