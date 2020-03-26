@@ -25,10 +25,6 @@ namespace HairSalon.Controllers
     {
 
       ViewBag.StylistId = new SelectList(_db.Stylists, "StylistId", "StylistName");
-
-      // SelectList stylists = new SelectList(_db.Stylists, "StylistId", "StylistName");
-      // ViewBag.StylistId = stylists;
-      // ViewBag.stylistCount = stylists.Count();
       return View();
     }
     [HttpPost]
@@ -80,7 +76,6 @@ namespace HairSalon.Controllers
     }
     public ActionResult Search()
     {
-      // ViewBag.StylistId = new SelectList(_db.Stylists, "StylistId", "StylistName");
       return View();
     }
     [HttpPost]

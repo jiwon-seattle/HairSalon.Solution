@@ -4,9 +4,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  border: 2px solid green;
   position: absolute;
-  /* justify-content: center; */
   top: 0px;
   left: 0;
   width:100%;
@@ -36,7 +34,6 @@ body
 
 .hairSalonMain
 {
-  border: 2px solid green;
   padding: 30px;
   text-align: center;
   display: flex;
@@ -52,7 +49,6 @@ body
   display: flex;
   justify-content: space-around;
   width:500px;
-  border: 2px solid green;
 }
 
 #imgX
@@ -77,11 +73,11 @@ body
 {
   width:500px;
   height:300px;
-  border: 2px solid green;
+  padding: 20px;
+  border: 2px solid #4b0082;
 }
 #mainbottom
 {
-  border: 2px solid green;
   width: 500px;
   display: flex;
   justify-content: space-around;
@@ -89,7 +85,6 @@ body
 
 .stylistIndex
 {
-  border: 2px solid green;
   padding: 30px;
   text-align: center;
   display: flex;
@@ -100,7 +95,6 @@ body
 }
 .stylistCreate
 {
-  border: 2px solid green;
   padding: 30px;
   text-align: center;
   display: flex;
@@ -112,7 +106,6 @@ body
 
 #stylistLists
 {
-  border: 2px solid green;
   height:350px;
 }
 #stylistLinks
@@ -120,13 +113,11 @@ body
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  border: 2px solid green;
   width: 600px;
 }
 
 .stylistSearch
 {
-  border: 2px solid green;
   padding: 30px;
   text-align: center;
   display: flex;
@@ -138,14 +129,12 @@ body
 
 #stylistSearchForm
 {
-  border: 2px solid green;
   height:200px;
   width: 300px;
 }
 
 .stylistSearchResult
 {
-  border: 2px solid green;
   padding: 30px;
   text-align: center;
   display: flex;
@@ -157,14 +146,12 @@ body
 
 #stylistSearchLists
 {
-  border: 2px solid green;
   height:200px;
   width: 300px;
 }
 
 .stylistDetails
 {
-  border: 2px solid green;
   padding: 30px;
   text-align: center;
   display: flex;
@@ -179,13 +166,11 @@ body
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  border: 2px solid green;
   width: 600px;
 }
 
 .stylistDelete
 {
-  border: 2px solid green;
   padding: 30px;
   text-align: center;
   display: flex;
@@ -197,13 +182,11 @@ body
 
 #stylistNameDelete
 {
-  border: 2px solid green;
   height: 300px;
 }
 
 .stylistEdit
 {
-  border: 2px solid green;
   padding: 30px;
   text-align: center;
   display: flex;
@@ -215,7 +198,6 @@ body
 
 .clientIndex
 {
-  border: 2px solid green;
   padding: 30px;
   text-align: center;
   display: flex;
@@ -227,7 +209,6 @@ body
 
 #clientList
 {
-  border: 2px solid green;
   height:350px;
 }
 
@@ -236,13 +217,11 @@ body
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  border: 2px solid green;
   width: 600px;
 }
 
 .clientCreate
 {
-  border: 2px solid green;
   padding: 30px;
   text-align: center;
   display: flex;
@@ -254,7 +233,6 @@ body
 
 .searchClient
 {
-  border: 2px solid green;
   padding: 30px;
   text-align: center;
   display: flex;
@@ -266,14 +244,12 @@ body
 
 #clientSearchForm
 {
-  border: 2px solid green;
   height:200px;
   width: 300px;
 }
 
 .clientSearchResult
 {
-  border: 2px solid green;
   padding: 30px;
   text-align: center;
   display: flex;
@@ -285,14 +261,12 @@ body
 
 #clientSearchLists
 {
-  border: 2px solid green;
   height:200px;
   width: 300px;
 }
 
 .clientDetails
 {
-  border: 2px solid green;
   padding: 30px;
   text-align: center;
   display: flex;
@@ -307,13 +281,11 @@ body
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  border: 2px solid green;
   width: 600px;
 }
 
 .clientEdit
 {
-  border: 2px solid green;
   padding: 30px;
   text-align: center;
   display: flex;
@@ -325,7 +297,6 @@ body
 
 .clientDelete
 {
-  border: 2px solid green;
   padding: 30px;
   text-align: center;
   display: flex;
@@ -337,13 +308,11 @@ body
 
 #clientNameDelete
 {
-  border: 2px solid green;
   height: 300px;
 }
 
 #nonStylist
 {
-  /* border: 2px solid #4b0082; */
   height:200px;
   color: #4b0082;
 }
