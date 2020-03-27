@@ -30,7 +30,7 @@
 ### To run dev mode locally:
 ```bash
   $ git clone https://github.com/jiwon-seattle/HairSalon.Solution.git
-  $ cd BestRestaurant
+  $ cd HairSalon
   $ dotnet add package Microsoft.EntityFrameworkCore -v 2.2.0
   $ dotnet add package Pomelo.EntityFrameworkCore.MySql -v 2.2.0
   # After successfull pkg installtion
